@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<<device-width>>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Produtos</h1>
+    <hr> 
+
+    <table id="produtos" border=1 width="100%">
+
+    </table>
+
+    <script>
+        //está pegando o elemento tabela de html
+        let tabela = document.querySelector("#produtos");
+
+        //vamos criar um linha tabela
+        let linha = tabela.insertRow();
+
+        //vamos criar uma célula na tabela
+        let celNome = linha.insertCell();
+        let celMarca = linha.insertCell();
+        let celPreco = linha.insertCell();
+
+        //coloca valores nas células
+        celNome.innerHTML = "xxx";
+        celMarca.innerHTML = "xxx";
+        celPreco.innerHTML = "xxx";
+
+
+    </script>
+
+
+</body>
+</html>
