@@ -23,7 +23,7 @@
         //está pegando o elemento tabela de html
         let tabela = document.querySelector("#produtos");
         
-        function inserirlinha(nome, marca, preco){
+        function inserirlinha(nome, marca, preco, img){
         //vamos criar um linha nessa tabela
         let linha = tabela.insertRow();
 
@@ -31,25 +31,30 @@
         let celNome = linha.insertCell();
         let celMarca = linha.insertCell();
         let celPreco = linha.insertCell();
+        let celImg = linha.insertCell();
 
         //coloca valores nas células
         celNome.innerHTML = nome;
         celMarca.innerHTML = marca;
         celPreco.innerHTML = preco;
 
+        var imagem =  document.createElement("img");
+        imagem.setAttribute("src", img);
+        celImg.append(imagem);
         }
         //fetch abre uma URL
-        fetch("http://localhost/3infob/dudagois/conteudo_backend/aula9/produtos.php")
+        fetch("https://makeup-api.herokuapp.com/api/v1/products.json")
         .then($resposta => $resposta.json())
         .then($json => {
-            for(var i= 0; i<3; i++){
-                inserirlinha($json[i]["nome"],
-                $json[i]["marca"], 
-                $json[i]["preco"]);    
+            for(var produto of $json){
+                inserirlinha(
+                produto["name"], 
+                produto["brand"],
+                produto["price"],
+                produto["image_link"]
+                )    
             }
         });
-        
-        inserirlinha("Televisão", "LG", 3500);
     </script>
 
 
