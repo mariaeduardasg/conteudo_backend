@@ -11,14 +11,20 @@
     <hr> 
 
     <table id="produtos" border=1 width="100%">
-
+        <tr>
+            <th>Nome</th>
+            <th>Marca</th>
+            <th>Preço</th>
+        </tr>
+        
     </table>
 
     <script>
         //está pegando o elemento tabela de html
         let tabela = document.querySelector("#produtos");
-
-        //vamos criar um linha tabela
+        
+        function inserirlinha(nome, marca, preco){
+        //vamos criar um linha nessa tabela
         let linha = tabela.insertRow();
 
         //vamos criar uma célula na tabela
@@ -27,11 +33,23 @@
         let celPreco = linha.insertCell();
 
         //coloca valores nas células
-        celNome.innerHTML = "xxx";
-        celMarca.innerHTML = "xxx";
-        celPreco.innerHTML = "xxx";
+        celNome.innerHTML = nome;
+        celMarca.innerHTML = marca;
+        celPreco.innerHTML = preco;
 
-
+        }
+        //fetch abre uma URL
+        fetch("http://localhost/3infob/dudagois/conteudo_backend/aula9/produtos.php")
+        .then($resposta => $resposta.json())
+        .then($json => {
+            for(var i= 0; i<3; i++){
+                inserirlinha($json[i]["nome"],
+                $json[i]["marca"], 
+                $json[i]["preco"]);    
+            }
+        });
+        
+        inserirlinha("Televisão", "LG", 3500);
     </script>
 
 
