@@ -14,7 +14,7 @@
 
     <div class="row row-cols-1 row-cols-md-3 g-3">
 
-    <?php foreach($noticias as $noticia): ?>
+    <?php foreach($noticias as $id => $noticia): ?>
 
             <div class="col">
             <div class="card">
@@ -22,7 +22,7 @@
             <div class="card-body">
                 <h5 class="card-title"><?php echo $noticia["titulo"]?></h5>
                 <p class="card-text"><?php echo $noticia["chamada"]?></p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="ler.php?id=<?php echo $id ?>" class="btn btn-primary">Ler mais</a>
             </div>
         </div>
 
