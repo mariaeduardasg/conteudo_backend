@@ -1,3 +1,9 @@
+<?php
+require_once "conexao.php";
+require_once "usuario/consultar_por_id.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,16 +19,16 @@
     <form action="usuario/inserir.php" method="post">
         
         <label>Nome</label><br>
-        <input type="text" name="nome"><br>
+        <input type="text" name="nome" value="<?php echo "Paulo Vitor"?>"><br>
 
         <label>Login</label><br>
         <input type="text" name="login"><br>
 
         <label>Senha</label><br>
         <input type="password" name="senha"><br>
-        
-        <button types="submit">Cadastrar</button>
 
+        <button type="submit">Inserir</button>
+        
     </form>
 
 
