@@ -68,7 +68,7 @@ $noticia3 = [
   //assunto pela URL
   if(isset($_GET["assunto"])){
   $assunto = $_GET["assunto"];
-  $noticias = array_filter($noticias, function($noticia))
+  $noticias = array_filter($noticias, function($noticia));
   }
 
 

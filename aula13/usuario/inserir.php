@@ -20,7 +20,7 @@
    $comando->execute();
    }
    //volta para o formulário
-   header("Location: ../form_usuarios.php");
+   header("Location: ../usuarios.php");
 
    
 

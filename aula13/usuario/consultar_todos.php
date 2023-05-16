@@ -9,8 +9,6 @@
    //prepara o comando para ser executado no mysql
    $comando = $conexao->prepare($SQL);
 
-   //diz qual valor vai ser colocado no lugar do ?
-   $comando->bind_param("i", $id);
 
    //executa o comando
    $comando->execute();
@@ -19,13 +17,13 @@
    $resultados = $comando->get_result();
    
    //pega a primeira linha de resultado da consulta
-   $ususarios = [];
-   while ($ususario = $resultados->fetch_object()){
-   $usuario = $resultados->fetch_object();
+   $usuarios = [];
+   while ($usuario = $resultados->fetch_object()){
+   $usuarios[] = $usuario;
 
    }
 
-   var_dump($usuarios);
+
 
 
 
