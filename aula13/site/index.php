@@ -16,7 +16,7 @@
 
     <?php foreach($noticias as $id => $noticia): ?>
 
-            <div class="col">
+        <div class="col">
             <div class="card">
             <img src="../uploads/<?php echo $noticia->foto?>" class="card-img-top" alt="...">
             <div class="card-body">
@@ -24,7 +24,6 @@
                 <a href="ler.php?id=<?php echo $noticia->idnoticia ?>" class="btn btn-primary">Ler mais</a>
             </div>
         </div>
-
     </div>
 <?php endforeach; ?>
     </div>
