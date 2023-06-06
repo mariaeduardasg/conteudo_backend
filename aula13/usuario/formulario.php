@@ -6,26 +6,27 @@
 
 <div class="container">
     <h1>Cadastro de usuário</h1>
+    
     <hr>
-
+    
     <form action="<?php echo isset($usuario) ? "atualizar.php" : "inserir.php"; ?>"
     method="post" enctype="multipart/form-data">
     
     <input type="hidden" name="idusuario" value="<?php echo $usuario->idusuario  ?? "" ;?>"><br>
         
     <label>Nome</label><br>
-        <input type="text" name="nome" value="<?php echo $usuario->nome  ?? "" ;?>"><br>
+        <input type="text" class="form-control" name="nome" value="<?php echo $usuario->nome  ?? "" ;?>"><br>
 
-        <label>Login</label><br>
-        <input type="text" name="login" value="<?php echo $usuario->login ?? "" ;?>"><br>
+        <label class="form-label">Login</label><br>
+        <input type="text" class="form-control" name="login" value="<?php echo $usuario->login ?? "" ;?>"><br>
 
-        <label>Senha</label><br>
-        <input type="password" name="senha" ><br>
+        <label class="form-label">Senha</label><br>
+        <input type="password" class="form-control" name="senha" ><br>
 
-        <label>Foto</label><br>
-        <input type="file" name="foto" ><br>
+        <label class="form-label">Foto</label><br>
+        <input type="file" class="form-control" name="foto" ><br>
 
-        <button type="submit">Inserir</button>
+        <button type="submit" class="btn btn-success">Inserir</button>
         
     </form>
 
