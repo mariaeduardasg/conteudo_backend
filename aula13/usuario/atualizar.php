@@ -21,7 +21,7 @@
    $comando->execute();
 
    //volta para o formulário
-   header("Location: ../index.php");
+   header("Location: index.php");
 
    
 

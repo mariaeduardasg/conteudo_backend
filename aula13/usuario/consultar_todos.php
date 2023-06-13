@@ -9,7 +9,6 @@
    //prepara o comando para ser executado no mysql
    $comando = $conexao->prepare($SQL);
 
-
    //executa o comando
    $comando->execute();
 
@@ -18,12 +17,9 @@
    
    //pega a primeira linha de resultado da consulta
    $usuarios = [];
-   while ($usuario = $resultados->fetch_object()){
-   $usuarios[] = $usuario;
-
+   while($usuario = $resultados->fetch_object()){
+      $usuarios[] = $usuario;
    }
-
-
 
 
 

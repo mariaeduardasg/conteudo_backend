@@ -1,12 +1,13 @@
 <?php
-   
+   require_once "../login/controlar_acesso.php";
    //importa o arquivo de conexão
    require_once "../banco/conexao.php";
+
    if(isset($_POST['titulo']) && isset($_POST['materia']) && isset($_POST['categoria'])){
-  
-  //Faz o upload da foto do usuário
+
+   //faz o upload da foto do usuário
    require_once "faz_upload.php";
-      
+
    $titulo = $_POST['titulo'];
    $materia = $_POST['materia'];
    $categoria = $_POST['categoria'];
@@ -23,7 +24,9 @@
 
    //executa o comando
    $comando->execute();
+
    }
+
    //volta para o formulário
    header("Location: index.php");
 

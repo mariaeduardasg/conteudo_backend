@@ -1,7 +1,7 @@
+    <?php require "../noticia/consultar_categorias.php"; ?>
+    <!-- Menu principal -->
 
-<!-- Menu principal -->
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Menu</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -11,27 +11,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    </li>
 
-                <li class="nav-item">
-                <a class="nav-link" 
-                        href="../site/index.php">
-                        Site
-                        </a>
-                        
-                <li class="nav-item">
-                <a class="nav-link" 
-                        href="../noticia/index.php">
-                        Notícias
-                        </a>
 
-                <li class="nav-item">
-                <a class="nav-link" 
-                        href="../usuario/index.php">
-                        Usuários
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../site/index.php">
+                        Site</a>
+                    </li>
 
-</li>
-                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="../noticia/index.php">
+                        Notícias</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../noticia/index.php">
+                        Usuários</a>
+                    </li>
+
+
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -40,6 +38,5 @@
             </div>
         </div>
     </nav>
-
 <hr>
     <!-- Final do menu -->

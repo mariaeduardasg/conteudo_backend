@@ -29,15 +29,14 @@ if (isset($_POST['login']) and isset($_POST['senha'])) {
             session_start();
             $_SESSION['usuario'] = $usuario->nome;
             header("Location: ../noticia/index.php");
-        } else {
-            $erro_login = "Senha incorreta burro do caralho!";
+        }else{
+            $erro_login = "Senha incorreta!";
         }
-    } else {
-        $erro_login = "Não existe usuário com essa porra de login!";
+
+    }else{
+        $erro_login = "Não existe usuário com o login informado!";
     }
 
 }
-
-
 
 ?>

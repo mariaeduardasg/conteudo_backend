@@ -1,5 +1,5 @@
 <?php
-   
+   require_once "../login/controlar_acesso.php";
    //importa o arquivo de conexão
    require_once "../banco/conexao.php";
 
@@ -7,7 +7,6 @@
    $titulo = $_POST['titulo'];
    $materia = $_POST['materia'];
    $categoria = $_POST['categoria'];
- 
 
    //cria uma variável com um comando SQL
    $SQL = "UPDATE `noticia` SET `titulo`= ?, `materia`= ?, `categoria`= ? WHERE  `idnoticia`= ? ;";
@@ -22,7 +21,7 @@
    $comando->execute();
 
    //volta para o formulário
-   header("Location: ../index.php");
+   header("Location: index.php");
 
    
 

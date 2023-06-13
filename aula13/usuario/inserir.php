@@ -2,11 +2,12 @@
    
    //importa o arquivo de conexão
    require_once "../banco/conexao.php";
+
    if(isset($_POST['nome']) && isset($_POST['login']) && isset($_POST['senha'])){
-  
-  //Faz o upload da foto do usuário
+
+   //faz o upload da foto do usuário
    require_once "faz_upload.php";
-      
+
    $nome = $_POST['nome'];
    $login = $_POST['login'];
    $senha = password_hash($_POST['senha'], PASSWORD_BCRYPT);
@@ -22,7 +23,9 @@
 
    //executa o comando
    $comando->execute();
+
    }
+
    //volta para o formulário
    header("Location: index.php");
 
