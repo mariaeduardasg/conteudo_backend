@@ -19,7 +19,7 @@
         <input class="form-control" type="number" name="preco" value="<?php echo $produto->preco ?? "";?>"><br>
 
         <label class="form-label">Descrição</label><br>
-        <textarea class="form-control" name="descricao" value="<?php echo $produto->descricao ?? "";?>"></textarea><br>
+        <textarea class="form-control" name="descricao"><?php echo $produto->descricao ?? "";?></textarea><br>
 
         <label class="form-label">Fabricante</label><br>
         <input class="form-control" type="text" name="fabricante" value="<?php echo $produto->fabricante ?? "";?>"><br>
